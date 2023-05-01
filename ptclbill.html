@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ptcl-Bill</title>
+	<style>
+		.container{
+			width:99vw;
+			height:170vh;
+			padding: 0;
+			margin: 0;
+		}
+		.green-box{
+			width:33vw;
+			height:4vh;
+			background-color: darkgreen;
+			margin-left: 8vw;
+			margin-top: 4vh;
+		}
+		.ptcl-row{
+			display: flex;
+		}
+		.ptcllogo-img img{
+			width:10vw;
+			height: 10vh;
+			margin-left: 8vw;
+			margin-top: 4vh;
+		}
+		.pakistantele{
+			margin-left: 2vw;
+		}
+		.invoice{
+			margin-left: 27vw;
+		}
+		.ptclstn{
+			margin-left: 25vw;
+		}
+		.stn-row{
+			display: flex;
+		}
+		.invoice-box{
+			width:16vw;
+			height:6vh;
+			border: 3px solid green;
+			margin-left: 22vw;
+		}
+		.invoice-boxno{
+			margin-left: 1vw;
+			font-size: 5vh;
+		}
+		.www-row{
+			display: flex;
+		}
+		.www{
+			margin-left: 10vw;
+		}
+		.invoiceno{
+			margin-left:40vw;
+		}
+		.anika-box{
+			width: 27vw;
+			height: 30vh;
+			border: 3px solid green;
+			margin-left: 8vw;
+			border-radius: 10%;
+		}
+		.anika{
+			margin-left: 1vw;
+		}
+		.anika-row{
+			display: flex;
+		}
+		.accountid-box{
+			width:14vw;
+			height: 4vh;
+			background-color: lightgreen;
+			margin-left: 22vw;
+			margin-top: 2vh;
+		}
+		.accountid{
+			margin-top: 1vh;
+			margin-left: 1vw;
+		}
+		.billingmonth-box{
+			width:14vw;
+			height: 4vh;
+			background-color: lightgreen;
+			margin-top: 1vh;
+		}
+		.billing-month{
+			margin-top: 1vh;
+			margin-left: 1vw;
+		}
+		.amountdue-box{
+			width:14vw;
+			height: 4vh;
+			background-color: darkgreen;
+			margin-top: 1vh;
+		}
+		.amount{
+			margin-top: 1vh;
+			margin-left: 1vw;
+			color: white;
+		}
+		.duedate-box{
+			width:14vw;
+			height: 4vh;
+			background-color: darkgreen;
+			margin-top: 1vh;
+		}
+		.due-date{
+			margin-top: 1vh;
+			margin-left: 1vw;
+			color: white;
+		}
+		.amountduedate-box{
+			width:14vw;
+			height: 4vh;
+			background-color: lightgreen;
+			margin-top: 1vh;
+		}
+		.amountdue-date{
+			margin-top: 1vh;
+			margin-left: 1vw;
+		}
+		.accountid-row{
+			display: flex;
+		}
+		.accountid-nobox{
+			width:14vw;
+			height: 4vh;
+			background-color: lightgray;
+			margin-top: 2vh;
+		}
+		.month-box{
+			width:14vw;
+			height: 4vh;
+			background-color: lightgray;
+			margin-top: 2vh;
+		}
+		.dueamount-box{
+			width:14vw;
+			height: 4vh;
+			background-color: lightgray;
+			margin-top: 2vh;
+			border: 2px solid red;
+		}
+		.due-box{
+			width:14vw;
+			height: 4vh;
+			background-color: lightgray;
+			margin-top: 2vh;
+			border: 2px solid red;
+		}
+		.afterdue-box{
+			width:14vw;
+			height: 4vh;
+			background-color: lightgray;
+			margin-top: 2vh;
+		}
+		.customerstn{
+			margin-left: 10vw;
+		}
+		.servicedetail-box{
+			width:42vw;
+			height:3vh;
+			background-color: olive;
+			margin-left: 6vw;
+		}
+		.servicesdetails{
+			color: white;
+			margin-left: 1vw;
+			margin-top: 0.5vh;
+		}
+		.service-row{
+			display: flex;
+		}
+		.servicedetail-box2{
+			width:29vw;
+			height:3vh;
+			background-color: olive;
+			margin-left: 8vw;
+		}
+		.billsummary{
+			color: white;
+			margin-left: 1vw;
+			margin-top: 0.5vh;
+		}
+		.voice-box{
+			width:20vw;
+			height:40vh;
+			background-color: lightgray;
+			margin-top: 2vh;
+			margin-left: 6vw;
+		}
+		.voice-greenbox{
+			width:20vw;
+			height:3vh;
+			background-color: lightgreen;
+		}
+		.voice{
+			color: white;
+			margin-left: 1vw;
+		}
+		.voiceline{
+			width: 20vw;
+			height: .2vh;
+			background-color: black;
+		}
+		.pakistanplus{
+			margin-left: 1vw;
+		}
+		.pakistanplus-row{
+			display: flex;
+		}
+		.rs290{
+			margin-left: 4vw;
+		}
+		.pakistan-line{
+			width: 20vw;
+			height: .2vh;
+			background-color: darkgrey;
+			margin-top: 1vh;
+		}
+		.linerent{
+			margin-left: 1vw;
+			margin-top: 1vh;
+		}
+		.linerent-row{
+			display: flex;
+		}
+		.rs225{
+			margin-left: 8vw;
+			margin-top: 1vh;
+		}
+		.localcall-charges{
+			margin-left: 1vw;
+			margin-top: 1vh;
+		}
+		.localcall-row{
+			display: flex;
+		}
+		.rs93{
+			margin-left: 4vw;
+			margin-top: 1vh;
+		}
+		.othercall-charges{
+			margin-left: 1vw;
+			margin-top: 1vh;
+		}
+		.othercall-row{
+			display: flex;
+		}
+		.rs2434{
+			margin-left: 4vw;
+			margin-top: 1vh;
+		}
+		.othercall-line{
+			width: 20vw;
+			height: .2vh;
+			background-color: darkgrey;
+			margin-top: 14vh;
+		}
+		.total{
+			margin-left: 1vw;
+			margin-top: 3vh;
+		}
+		.voicetotal-row{
+			display: flex;
+		}
+		.rs3042{
+			margin-left: 10vw;
+			margin-top: 3vh;
+		}
+		.total-line{
+			width: 20vw;
+			height: .2vh;
+			background-color: darkgrey;
+			margin-top: 1vh;
+		}
+		.voice-row{
+			display: flex;
+		}
+		.smarttv-box{
+			width: 20vw;
+			height:40vh;
+			background-color: lightskyblue;
+			margin-left: 2vw;
+			margin-top: 2vh;
+		}
+		.smarttv-box1{
+			width: 20vw;
+			height: 3vh;
+			background-color: purple;
+		}
+		.smarttv{
+			color: white;
+			margin-left: 1vw;
+		}
+		.smarttv-text{
+			margin-left: 2.3vw;
+			margin-top: 10vh;
+		}
+		.voicesummary{
+			margin-left: 9vw;
+		}
+		.fixedsummary{
+			margin-left: 9vw;
+		}
+		.evosummary{
+			margin-left: 9vw;
+		}
+		.smarttvsummary{
+			margin-left: 9vw;
+		}
+		.valuesummary{
+			margin-left: 9vw;
+		}
+		.discountsummary{
+			margin-left: 9vw;
+		}
+		.discountline{
+			width:28vw;
+			height: .2vh;
+			background-color: darkgrey;
+			margin-left: 9vw;
+		}
+		.tscsummary{
+			margin-left: 9vw;
+		}
+		.tscline{
+			margin-left: 9vw;
+			width:28vw;
+			height: .2vh;
+			background-color: darkgrey;
+		}
+		.arrearssummary{
+			margin-left: 9vw;
+		}
+		.creditsummary{
+			margin-left: 9vw;
+			margin-top: 7vh;
+		}
+		.stsummary{
+			margin-left: 9vw;
+		}
+		.whsummary{
+			margin-left: 9vw;
+		}
+		.whline{
+			margin-left: 9vw;
+			width:28vw;
+			height: .2vh;
+			background-color: darkgrey;
+		}
+		.gtsummary{
+			margin-left: 9vw;
+		}
+		.gtline{
+			margin-left: 9vw;
+			width:28vw;
+			height: .2vh;
+			background-color: darkgrey;
+		}
+		.voicesummary-box{
+			width:10vw;
+			height: 3vh;
+			background-color: lightgreen;
+		}
+		.fixedsummary-box{
+			width:10vw;
+			height: 3vh;
+			background-color: lightgreen;
+		}
+		.evosummary-box{
+			width:10vw;
+			height: 3vh;
+			background-color: lightgreen;
+		}
+		.smarttvsummary-box{
+			width:10vw;
+			height: 3vh;
+			background-color: lightgreen;
+		}
+		.vassummary-box{
+			width:10vw;
+			height: 3vh;
+			background-color: lightgreen;
+		}
+		.discountsummary-box{
+			width:10vw;
+			height: 3vh;
+			background-color: lightgreen;
+		}
+		.tscsummary-box{
+			width:10vw;
+			height: 3vh;
+			background-color: lightgreen;
+		}
+		.arrearsummary-box{
+			width:10vw;
+			height: 3vh;
+			background-color: lightgreen;
+		}
+		.creditsummary-box{
+			width:10vw;
+			height: 3vh;
+			background-color: lightgreen;
+			margin-top: 7vh;
+		}
+		.stsummary-box{
+			width:10vw;
+			height: 3vh;
+			background-color: lightgreen;
+		}
+		.whsummary-box{
+			width:10vw;
+			height: 3vh;
+			background-color: lightgreen;
+		}
+		.gtsummary-box{
+			width:10vw;
+			height: 3vh;
+			background-color: lightgreen;
+		}
+		.fixedbroad-box1{
+			width:20vw;
+			height:3vh;
+			background-color: lightblue;
+			margin-left: 6vw;
+			margin-top: 2vh;
+		}
+		.fixedbroadband1{
+			color: white;
+			margin-left: 1vw;
+		}
+		.fixedbroad-row1{
+			display: flex;
+		}
+		.evocharji-box1{
+			width:20vw;
+			height:3vh;
+			background-color: orange;
+			margin-left: 2vw;
+			margin-top: 2vh;
+		}
+		.evocharji1{
+			color: white;
+			margin-left: 1vw;
+		}
+		.billpaid-box1{
+			width:32vw;
+			height:3vh;
+			background-color: olive;
+			margin-left: 8.5vw;
+			margin-top: 2vh;
+		}
+		.billpaid1{
+			color: white;
+			margin-left: 1vw;
+		}
+		.fixedbroad-box2{
+			width:20vw;
+			height:28vh;
+			background-color:lightskyblue;
+			margin-left: 6vw;
+			margin-top: 2vh;
+		}
+		.fixedbroad-box3{
+			width:20vw;
+			height:3vh;
+			background-color: lightblue;
+		}
+		.fixedbroadband2{
+			color: white;
+			margin-left: 1vw;
+		}
+		.fixedbroad-text3{
+			margin-left: 1.5vw;
+			margin-top: 5vh;
+		}
+		.fixedbroad-row1{
+			display: flex;
+		}
+		.evocharji-box2{
+			width:20vw;
+			height:28vh;
+			background-color:lightpink;
+			margin-left: 2vw;
+			margin-top: 2vh;
+		}
+		.evocharji-box3{
+			width:20vw;
+			height:3vh;
+			background-color: orange;
+		}
+		.evocharji2{
+			color: white;
+			margin-left: 1vw;
+		}
+		.evocharji-text3{
+			margin-left: 1.5vw;
+			margin-top: 5vh;
+		}
+		.billpaid-box2{
+			width: 32vw;
+			height: 20vh;
+			background-color: lightslategray;
+			margin-left: 29vw;
+		}
+		.billpaid-box3{
+			width:32vw;
+			height:3vh;
+			background-color: olive;
+		}
+		.billpaid2{
+			color: white;
+			margin-left: 1vw;
+		}	
+		.march16-box{
+			width:8vw;
+			height: 3vh;
+			background-color: olive;
+		}
+		.march16{
+			margin-left: 1.5vw;
+		}
+		.march16-row{
+			display: flex;
+		}
+		.march16-box1{
+			width:24vw;
+			height: 3vh;
+			background-color: lightgreen;
+		}
+		.march16-1{
+			margin-left: 5vw;
+		}	
+		.feb16-box{
+			width:8vw;
+			height: 3vh;
+			background-color: olive;
+		}
+		.feb16{
+			margin-left: 1.5vw;
+		}
+		.feb16-row{
+			display: flex;
+		}
+		.feb16-box1{
+			width:24vw;
+			height: 3vh;
+			background-color: lightgreen;
+		}
+		.feb16-1{
+			margin-left: 5vw;
+		}	
+		.jan16-box{
+			width:8vw;
+			height: 3vh;
+			background-color: olive;
+		}
+		.jan16{
+			margin-left: 1.5vw;
+		}
+		.jan16-row{
+			display: flex;
+		}
+		.jan16-box1{
+			width:24vw;
+			height: 3vh;
+			background-color: lightgreen;
+		}
+		.jan16-1{
+			margin-left: 5vw;
+		}
+		.dec16-box{
+			width:8vw;
+			height: 3vh;
+			background-color: olive;
+		}
+		.dec16{
+			margin-left: 1.5vw;
+		}
+		.dec16-row{
+			display: flex;
+		}
+		.dec16-box1{
+			width:24vw;
+			height: 3vh;
+			background-color: lightgreen;
+		}
+		.dec16-1{
+			margin-left: 5vw;
+		}	
+		.nov16-box{
+			width:8vw;
+			height: 3vh;
+			background-color: olive;
+		}
+		.nov16{
+			margin-left: 1.5vw;
+		}
+		.nov16-row{
+			display: flex;
+		}
+		.nov16-box1{
+			width:24vw;
+			height: 3vh;
+			background-color: lightgreen;
+		}
+		.nov16-1{
+			margin-left: 5vw;
+		}
+		.oct16-box{
+			width:8vw;
+			height: 3vh;
+			background-color: olive;
+		}
+		.oct16{
+			margin-left: 1.5vw;
+		}
+		.oct16-row{
+			display: flex;
+		}
+		.oct16-box1{
+			width:24vw;
+			height: 3vh;
+			background-color: lightgreen;
+		}
+		.oct16-1{
+			margin-left: 5vw;
+		}
+		.footer-text{
+			margin-left: 8vw;
+			margin-top: 4vh;
+		}																			
+	</style>
+</head>
+<body>
+	<div class="container">
+			<div class="green-box">
+			</div>
+			<div class="ptcl-row">
+			<div class="ptcllogo-img">
+				<img src="C:\Users\user\Desktop/download.png">
+			</div>
+			<div class="pakistantele"><h3>Pakistan Telecommunication<br/>Company Limited</h3></div>
+			<div class="invoice"><h1>INVOICE</h1></div>
+		    </div>
+		    <div class="stn-row">
+		    	<div class="ptclstn"><h4>PTCL STN:   0701851701346</h4><h4>PTCL NTN:  0801599-6</h4></div>
+		    	<div class="invoice-box">
+		    		<div class="invoice-boxno"><b>021-35871719</b></div>
+		    	</div>
+		    </div>
+		    <div class="www-row">
+		    	<div class="www"><b>www.ptcl.com.pk</b></div>
+		    	<div class="invoiceno"><b>Invoice#    10557086355000</b>
+		    		<br/><b>Issue Date: 13-05-2016</b></div>
+		    </div>
+		    <div class="anika-row">
+		    <div class="anika-box">
+		    	<div class="anika"><h4><b>ANIKA MALIK</b></h4>
+		    	<br/>
+		    	D-13,BLOCK-4
+		    	<br/>
+		    	K.D.A,SCH-5,KEHKASHAN,CLIFTON
+		    	<br/>KARACHI
+		    	</div>
+		    </div>
+		    <div class="accountid-row">
+		    <div class="accountid-box">
+		    	<div class="accountid"><b>ACCOUNT ID</b></div>
+		    	<div class="billingmonth-box">
+		    		<div class="billing-month"><b>BILLING MONTH</b></div>
+		    	</div>
+		    	<div class="amountdue-box">
+		    		<div class="amount"><b>Amount Due</b></div>
+		    	</div>
+		    	<div class="duedate-box">
+		    		<div class="due-date"><b>Due Date</b></div>
+		    	</div>
+		    	<div class="amountduedate-box">
+		    		<div class="amountdue-date"><b>Amount After Due Date</b></div>
+		    	</div>
+		    </div>
+		    <div class="accountid-nobox">
+		    		<div class="accountno">1215871719</div>
+		    	<div class="month-box">
+		    		<div class="monthname">April-2016</div>
+		    		<div class="dueamount-box">
+		    		<div class="due-amount"><b>Rs.3,920.00</b></div>
+		    		<div class="due-box">
+		    		<div class="duedate name"><b>06-06-2016</b></div>
+		    		<div class="afterdue-box">
+		    		<div class="afterduedate name">Rs.4,120.00</div>
+		    	</div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+</div>
+</div>
+
+		<div class="customerstn">
+			<p>Customer STN/NTN:  11111111111</p>
+		</div>
+		<div class="service-row">
+		<div class="servicedetail-box">
+			<div class="servicesdetails">Services Details</div>
+		</div>
+		<div class="servicedetail-box2">
+			<div class="billsummary">Bill Summary</div>
+		</div>
+	    </div>
+	    <div class="voice-row">
+	    	<div class="voice-box">
+	    		<div class="voice-greenbox">
+	    		<div class="voice"><b>VOICE</b>
+	    		</div>
+	    		<div class="voice-line">
+	    		</div>
+	    		<div class="pakistanplus-row">
+	    			<div class="pakistanplus"><b>PAKISTAN PLUS</b></div>
+	    			<div class="rs290"><b>Rs.290.00</b></div>
+	    		</div>
+	    		<div class="pakistan-line">
+	    		</div>
+	    		<div class="linerent-row">
+	    			<div class="linerent">Line Rent</div>
+	    			<div class="rs225">Rs.225.00</div>
+	    		</div>
+	    		<div class="localcall-row">
+	    			<div class="localcall-charges">Local Call Charges</div>
+	    			<div class="rs93">Rs.93.00</div>
+	    		</div>
+	    		<div class="othercall-row">
+	    			<div class="othercall-charges">Other Call Charges</div>
+	    			<div class="rs2434">Rs.2434.37</div>
+	    		</div>
+	    		<div class="othercall-line">
+	    		</div>
+	    		<div class="voicetotal-row">
+	    			<div class="total"><b>Total</b></div>
+	    			<div class="rs3042"><b>Rs.3042.97</b></div>
+	    		</div>
+	    		<div class="total-line">
+	    		</div>
+	    	</div>
+	    	</div>
+	    	<div class="smarttv-box">
+	    		<div class="smarttv-box1">
+	    			<div class="smarttv"><b>SMART TV</b></div>
+	    			<div class="smarttv-text">
+	    				<p> 100s of new cartoons and kids
+	    					<br/> 
+	    					programs are now avalable in
+	    					<br/> 
+	    				"e-junor on demano" on PTCL Smart
+	    					<br/>
+	    					TV-VOD.Subscriber for Rs299/--per
+	    					<br/>
+	    					month and watch as many times as
+	    					<br/>
+	    				you like</p>
+	    			</div>
+	    		</div>
+	    	</div>
+	    	<div class="billsummaryvoice-row">
+	    		<div class="voicesummary">Voice</div>
+	    	     <div class="fixedsummary">Fixed Broad Band</div>
+	    	     <div class="evosummary">EVO/Charji EVO</div>
+	    	     <div class="smarttvsummary">Smart TV</div>
+	    	     <div class="valuesummary">Value Added Services</div>
+	    	     <div class="discountsummary">Discount</div>
+	    	     <div class="discountline">
+	    	     </div>
+	    	     <div class="tscsummary"><b>Total Services Charges</b></div>
+	    	     <div class="tscline">
+	    	     </div>
+	    	     <div class="arrearssummary">Arrears</div>
+	    	     <div class="creditsummary">Credit</div>
+	    	     <div class="stsummary">Sales Tax"</div>
+	    	     <div class="whsummary">W.H.Tax"</div>
+	    	     <div class="whline">
+	    	     </div>
+	    	     <div class="gtsummary"><b>Grand Total</b></div>
+	    	     <div class="gtline">
+	    	     </div>
+	    	 </div>
+	    	 <div class="voicesummary-box">
+	    	     	<div class="voicers">Rs. 3,042.97</div>
+	    	
+	    	  <div class="fixedsummary-box">
+	    	     	<div class="fixedrs">Rs. 0.00</div>
+	    	 </div>
+	    	  <div class="evosummary-box">
+	    	     	<div class="evors">Rs. 0.00</div>
+	    	 </div>
+	    	 <div class="smarttvsummary-box">
+	    	     	<div class="smarttvrs">Rs. 0.00</div>
+	    	 </div>
+	    	 <div class="vassummary-box">
+	    	     	<div class="vadrs">Rs. 50.00</div>
+	    	 </div>
+	    	 <div class="discountsummary-box">
+	    	     	<div class="discountrs">Rs. 0.00</div>
+	    	 </div>
+	    	 <div class="tscsummary-box">
+	    	     	<div class="tscrs"><b>Rs. 3,092.97</b></div>
+	    	 </div>
+	    	 <div class="arrearsummary-box">
+	    	     	<div class="arrearsrs">Rs. 3.00</div>
+	    	 </div>
+	    	 <div class="creditsummary-box">
+	    	     	<div class="creditrs">-Rs. 2.00</div>
+	    	 </div>
+	    	 <div class="stsummary-box">
+	    	     	<div class="strs">Rs. 557.00</div>
+	    	 </div>
+	    	 <div class="whsummary-box">
+	    	     	<div class="whrs">Rs. 256.00</div>
+	    	 </div>
+	    	 <div class="gtsummary-box">
+	    	     	<div class="gtrs"><b>Rs. 3,919.97</b></div>
+	    	 </div>
+	    </div>
+
+	    </div>
+	    <div class="fixedbroad-row1">
+	    <div class="fixedbroad-box1">
+	    	<div class="fixedbroadband1">FIXED BROADBAND</div>
+	    </div>
+	     <div class="evocharji-box1">
+	    	<div class="evocharji1">EVO/CHARJI</div>
+	    </div>
+	     <div class="billpaid-box1">
+	    	<div class="billpaid1">BILL/PAID HISTORY</div>
+	    </div>
+	    </div>
+	     <div class="fixedbroad-row1">
+	     	<div class="fixedbroad-box2">
+	     		<div class="fixedbroad-box3">
+	     			<div class="fixedbroadband2">FIXED BROADBAND</div>
+	     		</div>
+	     		<div class="fixedbroad-text3">
+	     			<p>Get 4 Mbps Starter Package (20
+	    			<br/>GBs download) and enjoy
+	    			<b/>seamless browsing,downloading
+	    			<b/>@ Rs.999/month.For further details.
+	    		</p>
+
+	     		</div>
+	     	</div>
+
+	     	<div class="evocharji-box2">
+	     		<div class="evocharji-box3">
+	     			<div class="evocharji2">EVO/CHARJI</div>
+	     		
+	     		<div class="evocharji-text3">
+	     			<p>Upgrade your exisiting EVO 9.3
+	    			<br/>device to a CharJi LTE by visiting 
+	    			<b/>any PTCL Smart Shop toady &
+	    			<b/>experience up to three times the.
+	    		</p>
+
+	     		</div>
+	     	</div>
+          
+	     	<div class="billpaid-box2">
+	     		<div class="billpaid-box3">
+	     			<div class="billpaid2">BILLED/PAID HISTORY</div>
+	     		</div>
+	     		<div class="march16-row">
+	     			<div class="march16-box">
+	     				<div class="march16">March-16</div>
+	     			</div>
+	     			<div class="march16-box1">
+	     				<div class="march16-1">Rs.5,691.00    /     Rs.5,690.00</div>
+	     			</div>
+	     		</div>
+	     		<div class="feb16-row">
+	     			<div class="feb16-box">
+	     				<div class="feb16">Feb-16</div>
+	     			</div>
+	     			<div class="feb16-box1">
+	     				<div class="feb16-1">Rs.4,390.00    /     Rs.4,390.00</div>
+	     			</div>
+	     		</div>
+	     		<div class="jan16-row">
+	     			<div class="jan16-box">
+	     				<div class="jan16">Jan-16</div>
+	     			</div>
+	     			<div class="jan16-box1">
+	     				<div class="jan16-1">Rs.5,150.00    /     Rs.5,150.00</div>
+	     			</div>
+	     		</div>
+	     		<div class="dec16-row">
+	     			<div class="dec16-box">
+	     				<div class="dec16">Dec-15</div>
+	     			</div>
+	     			<div class="dec16-box1">
+	     				<div class="dec16-1">Rs.2,926.00    /     Rs.2,926.00</div>
+	     			</div>
+	     		</div>
+	     		<div class="nov16-row">
+	     			<div class="nov16-box">
+	     				<div class="nov16">Nov-15</div>
+	     			</div>
+	     			<div class="nov16-box1">
+	     				<div class="nov16-1">Rs.5,368.00    /     Rs.5,370.00</div>
+	     			</div>
+	     		</div>
+	     		<div class="oct16-row">
+	     			<div class="oct16-box">
+	     				<div class="oct16">Oct-15</div>
+	     			</div>
+	     			<div class="oct16-box1">
+	     				<div class="oct16-1">Rs.4,426.00    /     Rs.4,430.00</div>
+	     			</div>
+	     		</div>
+	     	</div>
+	     </div>
+	 </div>
+	<div class="footer-text">
+		<p>
+			<b>Get 4 Mbps Triple Play Bundle and Enjoy Smart TV,Freedom Package and high speeed internet package
+				<br/>
+				@Rs.2250/month.For further details dail 0800 8 0800.
+			</b>
+		</div>
+	</div>
+
+</body>
+</html>
